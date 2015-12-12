@@ -1,1 +1,0 @@
-O trabalho está rodando em uma instancia de uma máquina virtual do EC2, acessível pelo IP http://54.233.87.22/
