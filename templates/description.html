@@ -1,0 +1,33 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title="System Distribution Project">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/base-min.css">
+    <style>
+      body {
+        margin-top: 40px;
+        margin-right: 40px;
+        margin-bottom: 10px;
+        margin-left: 60px;
+      }
+    </style>
+</head>
+
+<body>
+  <!-- <h1>The download was successful</h1> -->
+  <br /> id: {{ id }}
+  <br /> filename: {{ filename }}
+  <br /> name: {{ name }}
+  <br /> description: {{ description }}
+  <form class="pure-form" action="download" method="post" enctype="multipart/form-data">
+    <button name="mydownload" value= {{ filename }} class="pure-button pure-button-primary">Download</button>
+  </form>
+  <form class="pure-form" action="index" method="post" enctype="multipart/form-data">
+    <button class="pure-button pure-button-primary">Back</button>
+  </form>
+  <br />
+</body>
+
+</html>

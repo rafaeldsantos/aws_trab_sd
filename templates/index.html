@@ -1,0 +1,137 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title="System Distribution Project- Rafael Santos e Mateus Gomes">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/base-min.css">
+    <style>
+      body {
+        margin-top: 40px;
+        margin-right: 40px;
+        margin-bottom: 10px;
+        margin-left: 60px;
+      }
+    </style>
+</head>
+
+<body>
+  <div>
+    <style scoped>
+      .button-success,
+      .button-error,
+      .button-warning,
+      .button-secondary {
+        color: white;
+        border-radius: 4px;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      }
+
+      .button-success {
+        background: rgb(28, 184, 65);
+      }
+
+      .button-error {
+        background: rgb(202, 60, 60);
+      }
+
+      .button-warning {
+        background: rgb(223, 117, 20);
+      }
+
+      .button-secondary {
+        background: rgb(66, 184, 221);
+      }
+
+      .button-xsmall {
+        font-size: 70%;
+      }
+
+      .button-small {
+        font-size: 85%;
+      }
+
+      .button-large {
+        font-size: 110%;
+      }
+
+      .button-xlarge {
+        font-size: 125%;
+      }
+    </style>
+
+
+    <h2>Upload</h2>
+
+    <form class="pure-form pure-form-stacked" action="upload" method="post" enctype="multipart/form-data">
+      <legend>Filename:</legend>
+      <fieldset>
+
+        <label for="name">Name:</label>
+        <input id="name" type="text" name="name" placeholder="Name">
+
+        <label for="description">Description:</label>
+        <textarea rows="4" cols="50" id=description type="text" name="description" placeholder="Description"></textarea>
+        <br />
+        <input type="file" name="myFile" />
+        <br />
+        <button class="button-large pure-button button-success button-large" type="submit">Upload</button>
+      </fieldset>
+    </form>
+    <!-- </div> -->
+    <div class="pure-u-1-3">
+      <h2>Download</h2>
+      <!-- <legend>d</legend> -->
+      <form class="pure-form" action="description" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <label for="filename">Name:</label>
+          <select id=filename name="mydownload">
+            {% for item in lista %}
+            <option>{{ item }}</option>
+            {% endfor %}
+          </select>
+          <br />
+          <br />
+          <button class="pure-button button-secondary button-large">Download</button>
+          <fieldset>
+      </form>
+      <!-- <form class="pure-form" action="description" method="post" enctype="multipart/form-data"> -->
+
+        <!-- <h2>Description</h2>
+
+        <form class="pure-form" action="description" method="post" enctype="multipart/form-data">
+          <fieldset>
+            <label for="filename">Name:</label>
+            <select id=filename name="mydownload">
+              {% for item in lista %}
+              <option>{{ item }}</option>
+              {% endfor %}
+            </select>
+            <br />
+            <br />
+            <button class="pure-button button-warning button-large">Description</button>
+            <fieldset>
+        </form> -->
+
+      <br />
+      <br />
+      <br />
+      <br />
+
+
+      <form class="pure-form" action="delete" method="post" enctype="multipart/form-data">
+        <fieldset>
+
+          <select id=filename name="mydelete">
+            {% for item in lista %}
+            <option>{{ item }}</option>
+            {% endfor %}
+          </select>
+          <button class="pure-button button-error button-xsmall">Delete</button>
+
+          <fieldset>
+      </form>
+
+</body>
+
+</html>

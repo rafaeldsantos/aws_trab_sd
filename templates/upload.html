@@ -1,0 +1,28 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title="System Distribution Project">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/base-min.css">
+    <style>
+      body {
+        margin-top: 40px;
+        margin-right: 40px;
+        margin-bottom: 10px;
+        margin-left: 60px;
+      }
+    </style>
+</head>
+
+<body>
+  <h1>The upload was successful ;D!</h1>
+  <br /> Filename: {{ filename }}
+  <br /> File mime-type: {{ type }}
+  <form class="pure-form" action="index" method="post" enctype="multipart/form-data">
+    <button class="pure-button pure-button-primary">Back</button>
+  </form>
+  <br />
+</body>
+
+</html>
