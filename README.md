@@ -1,5 +1,5 @@
 # awstrabsd
-aws test
+Trabalho de Sistemas Distribuídos para aprender a usar alguns serviços do AWS, na qual um webservice em cherrypy hospedado em uma vm do EC2 se comunica com o S3 e com o DynamoDB
 
 Passos para execultar esse projeto
 
